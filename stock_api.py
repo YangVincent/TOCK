@@ -9,7 +9,3 @@ class StockAPI:
     def get_stock_history(self, ticker):
         s = yf.Ticker(ticker)
         return s.history(period="max")
-
-if __name__ == "__main__":
-    sapi = StockAPI()
-    print(sapi.get_stock_history("MSFT"))
